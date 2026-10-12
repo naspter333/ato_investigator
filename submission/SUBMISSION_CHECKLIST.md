@@ -5,13 +5,13 @@
 - [x] Functional account takeover data application
 - [x] Reproducible synthetic CSV and generator
 - [x] Explainable detection rules and evaluation metrics
-- [x] Engine tests and browser checks
-- [x] Screenshots of the app
+- [x] Python engine tests and Streamlit AppTest checks
+- [x] Streamlit app and live build-journal screenshots
 - [x] Demo narration and walkthrough script
 - [ ] Google Doc imported from the report and viewer access checked
 - [x] GitHub public repository created and code pushed
 - [ ] Your narrated live demo recorded, uploaded, and viewer access checked
-- [ ] Screenshots of the Codex conversation added to the Google Doc
+- [ ] Optional original Codex UI screenshots added if required; rendered actual-prompt journal screenshots are included
 - [ ] Actual personal learnings reviewed and added to the report
 - [ ] Submission form completed by you
 
@@ -23,7 +23,7 @@ Video: pending your narrated recording/upload
 
 GitHub: https://github.com/naspter333/ato_investigator
 
-Working app: https://ato-investigator-lab.srinivasabala-rudrar.chatgpt.site (deployed and owner-private)
+Final working app: local Streamlit, http://localhost:8501 after `streamlit run app.py`. The previous chatgpt.site URL is the historical static prototype.
 
 Submission form supplied by the assignment: https://forms.gle/VpQz7ZnsgL1bYRqv6
 

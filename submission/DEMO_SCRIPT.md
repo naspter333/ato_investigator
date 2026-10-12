@@ -4,7 +4,7 @@ Target duration: 4 minutes 30 seconds. Record your voice and the running applica
 
 ## 0:00–0:30 Problem and project
 
-“I chose Path 3 and built ATO Investigator, an account takeover investigation app. Fraud analysts need to connect login behavior, credential changes, and money movement into a single account story. I used Codex to build a working browser app with explainable detection rules and synthetic data.”
+“I chose Path 3 and built ATO Investigator, an account takeover investigation app. Fraud analysts need to connect login behavior, credential changes, and money movement into a single account story. I used Codex to build a working Streamlit app with explainable detection rules and synthetic data.”
 
 Show the overview. Explain that no real customer data is included.
 
@@ -16,17 +16,17 @@ Briefly filter home country to US, show the count update, and reset.
 
 ## 1:00–2:00 Investigate the attack sequence
 
-Open ACC-0001. Change Signals only to All activity. Scroll the timeline to October 11.
+Open Account investigation and choose ACC-0001. Turn Signals only off to show all activity. Scroll the timeline table to October 11.
 
 “This account has four failed logins, followed by a password reset, a successful login from a new device and country, a new beneficiary, and a $6,322 transfer. The successful login and transfer each score 80. The account score is the highest event score, not a fraud probability.”
 
-Switch to Signals only. Enter a short note and select Escalated, then Save case notes.
+Turn Signals only on. Enter a short note and select Escalated, then Save case notes.
 
-“The reasons are visible, and I can record my investigation outcome. Notes are saved in this browser and can be exported.”
+“The reasons are visible, and I can record my investigation outcome. Notes are saved for the current Streamlit session and can be exported.”
 
 ## 2:00–2:40 Show a benign lookalike
 
-Go to Investigate accounts, search ACC-0013, open it, and reveal synthetic ground truth.
+Go to Account investigation, choose ACC-0013, and reveal synthetic ground truth.
 
 “This legitimate traveler triggers new-device and new-country signals. It demonstrates why an alert needs investigation rather than being treated as proof of fraud.”
 
@@ -34,7 +34,7 @@ Reset the filters.
 
 ## 2:40–3:25 Compare detection settings
 
-Open Detection playground. Raise Account alert threshold from 40 to 70.
+Open Detection playground. Raise Account alert threshold from 40 to 70 and click Apply rules.
 
 “Alerts drop from 22 to 8. The 14 benign alerts disappear in this synthetic example, but recall remains 8 out of 12 takeovers. Four low-signal takeovers are still missed. This shows the limits of the available signals; these results are not a production performance claim.”
 
@@ -50,7 +50,7 @@ Show the tests or report briefly. Only claim work or iterations you can explain 
 
 ## 4:00–4:30 Learnings and close
 
-“The main learnings were to keep labels out of scoring, explain metric definitions, and include benign scenarios and missed attacks. Nine engine tests and thirteen browser checks verify the key behavior. A future version could add approved data, MFA events, and a more complete analyst workflow. The code and documentation are included with the submission.”
+“The main learnings were to keep labels out of scoring, explain metric definitions, and include benign scenarios and missed attacks. Nine Python engine tests and five Streamlit AppTest workflows verify the key behavior. A future version could add approved data, MFA events, and a more complete analyst workflow. The code and documentation are included with the submission.”
 
 ## Recording checklist
 
@@ -59,4 +59,8 @@ Show the tests or report briefly. Only claim work or iterations you can explain 
 - Include live interaction, not only screenshots.
 - Record yourself explaining the problem and use of Codex.
 - Upload to Loom or another shareable video host; verify viewer access.
-- If using the hosted private Site, record while signed in. Reviewers can see the recording and run the GitHub code locally; the private Site itself is owner-only.
+- Run `streamlit run app.py` and record the Streamlit URL. The old private Site is a historical static prototype; do not use it for the final Streamlit demo.
+
+## Show the coding process
+
+Use about 20 seconds of the data/workflow section to open Vibe coding build journal. Show Actual prompts, Build steps, and Code and tests. These pages contain real recorded messages and executed validation output. They are rendered journal evidence rather than original Codex UI screenshots.

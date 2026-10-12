@@ -1,0 +1,96 @@
+{
+  "prompts": [
+    {
+      "stage": "Project ideation",
+      "text": "Hi Codex - Need help with project suggestions for my project. Here are the guidelines. I prefer picking path-3 and I need ideas to build something in fraud domain that I work on for this project."
+    },
+    {
+      "stage": "Project selection and build authorization",
+      "text": "I want to pick account takeover project and would need help building the project end to end for submission."
+    },
+    {
+      "stage": "Repository publication preference",
+      "text": "Create a new public repository"
+    },
+    {
+      "stage": "Framework correction",
+      "text": "Can you create streamlit app instead of liocal browser window? You missed part of teh instructions in the report."
+    },
+    {
+      "stage": "Streamlit conversion and documentation requirements",
+      "text": "Please go ahead with Streamlit. The report should include the prompts used, screenshots of the vibe-coding process, and the full step-by-step build breakdown, not just the finished app screenshots."
+    }
+  ],
+  "steps": [
+    {
+      "number": 1,
+      "title": "Read the assignment",
+      "detail": "Read the supplied Week 1 guidelines. Identify the Path 3 problem statement, full build breakdown, prompts, process screenshots, a live video of five minutes or less, and the GitHub code link."
+    },
+    {
+      "number": 2,
+      "title": "Choose account takeover",
+      "detail": "Discuss fraud-domain project options. The user selects account takeover and authorizes an end-to-end build."
+    },
+    {
+      "number": 3,
+      "title": "Define investigation scope",
+      "detail": "Connect login attempts, device and country changes, password resets, beneficiary additions, and transfers. Include both suspicious behavior and legitimate lookalikes."
+    },
+    {
+      "number": 4,
+      "title": "Create reproducible synthetic data",
+      "detail": "Implement scripts/generate_data.py using Python standard-library CSV, JSON, datetime, and random with seed 42. Produce 1,578 events across 80 accounts spanning October 1\u201311, 2026 UTC."
+    },
+    {
+      "number": 5,
+      "title": "Build and test the initial prototype",
+      "detail": "The initial implementation used JavaScript chronological rules and a static interface. Nine engine tests and thirteen browser checks passed. This was a framework mismatch with the user's intended Streamlit project and was corrected below."
+    },
+    {
+      "number": 6,
+      "title": "Prepare and publish the initial code",
+      "detail": "Generate screenshots, create a report and narration script, publish the initial private static demo, and upload 24 assets to the user's public GitHub repository. The original report documented outputs but did not sufficiently show the full coding process."
+    },
+    {
+      "number": 7,
+      "title": "Apply the user's corrections",
+      "detail": "The user explicitly requests Streamlit and a report containing actual prompts, process screenshots, and the full step-by-step breakdown. Preserve the fraud scenarios but make Python and Streamlit the primary implementation."
+    },
+    {
+      "number": 8,
+      "title": "Set up the Python environment",
+      "detail": "Create a project-local .venv. Install Streamlit, pandas, and Plotly after native network permission. Pin the versions used in requirements.txt and define .streamlit/config.toml."
+    },
+    {
+      "number": 9,
+      "title": "Port chronological rules to Python",
+      "detail": "Create fraud_engine.py with strict CSV validation, earlier-event context, configurable time and amount thresholds, account-level metrics, and safe exports. Keep is_ato labels and scenario descriptions out of scoring."
+    },
+    {
+      "number": 10,
+      "title": "Build the Streamlit workspace",
+      "detail": "Create app.py with sidebar navigation and shared cohort filters, Plotly charts, review queues, chronological timelines, rule forms, session case notes, uploads and downloads, and a build journal containing actual prompts and artifacts."
+    },
+    {
+      "number": 11,
+      "title": "Test and inspect the converted app",
+      "detail": "Run Python engine tests and Streamlit AppTest checks, start the local Streamlit server, and inspect the running views. Capture screenshots of the actual Streamlit app and build journal. Save executed commands and outputs as validation evidence."
+    },
+    {
+      "number": 12,
+      "title": "Rebuild submission materials and publish",
+      "detail": "Replace the report with a detailed Streamlit report containing actual prompts, step-by-step implementation, process screenshots, validation, iterations, and limitations. Update README, demo script, checklist, code ZIP, and GitHub. The narrated video and final form submission remain the user's actions."
+    }
+  ],
+  "iterations": [
+    "The initial static-browser framework choice was corrected to Streamlit at the user's request.",
+    "The original report emphasized finished-app screenshots. The revision adds the actual prompt history, detailed steps, source artifacts, and executed test outputs.",
+    "Chronological rules use only earlier activity, and account labels are excluded from scoring.",
+    "Synthetic benign travel and password-recovery cases expose false positives; low-signal takeovers expose missed detections.",
+    "Streamlit uploads are processed by Python on the server, unlike the earlier browser-only app; documentation must explain that difference.",
+    "Case notes use Streamlit session state rather than browser local storage and need export for durable retention.",
+    "Automated access to the original Codex chat UI is blocked. Journal screenshots are explicitly identified as live journal views rendered from actual messages and artifacts.",
+    "Adding a second radio selector exposed a test-harness error: positional widget selection targeted the wrong control. Stable Streamlit widget keys fixed the selection; the failed test output is retained alongside the final validation output."
+  ]
+}
