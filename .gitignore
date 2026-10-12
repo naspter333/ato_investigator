@@ -5,3 +5,5 @@ node_modules/
 submission/qa/
 *.tar.gz
 *.zip
+
+submission/video-assets/

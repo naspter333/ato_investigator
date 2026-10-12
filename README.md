@@ -2,6 +2,10 @@
 
 A Week 1 Path 3 data application for investigating account takeover. **The primary app is now Python and Streamlit (`app.py`).** The earlier static demo and JavaScript assets in `dist/` are retained as development history; they are not the final Streamlit submission. The synthetic data in `dist/data/` is reused by the Python app.
 
+## Demo video
+
+[Watch or download the 4 minute 34 second demo MP4](https://github.com/naspter333/ato_investigator/raw/refs/heads/main/submission/ATO_Investigator_Demo.mp4). It includes synthetic narration, burned-in captions, and edited captures of the real Streamlit app. It is not a recording of the project owner presenting live. The original live-demo script remains available for a personal recording.
+
 ## Run the Streamlit app
 
 Requires Python 3.11 or newer. Tested with Python 3.14, Streamlit 1.65.0, pandas 3.0.6, and Plotly 7.1.0.

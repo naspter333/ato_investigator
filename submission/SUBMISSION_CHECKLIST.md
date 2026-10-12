@@ -19,7 +19,7 @@
 
 Google Doc: pending account connection/import
 
-Video: pending your narrated recording/upload
+Generated demo video: https://github.com/naspter333/ato_investigator/raw/refs/heads/main/submission/ATO_Investigator_Demo.mp4 (4:34, synthetic narration and edited screen captures). Your personal narrated live recording remains pending if required for submission.
 
 GitHub: https://github.com/naspter333/ato_investigator
 

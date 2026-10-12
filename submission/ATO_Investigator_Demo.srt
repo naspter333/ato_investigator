@@ -1,0 +1,221 @@
+1
+00:00:00,000 --> 00:00:05,579
+This is A T O Investigator, a Streamlit application for investigating account takeover.
+
+2
+00:00:05,579 --> 00:00:12,874
+The project helps a fraud analyst connect login behavior, credential changes, and transfers
+into one account story.
+
+3
+00:00:12,874 --> 00:00:17,595
+It was built with Codex using Python, Streamlit, pandas, and Plotly.
+
+4
+00:00:17,595 --> 00:00:21,886
+This edited walkthrough uses real application captures and synthetic narration.
+
+5
+00:00:21,886 --> 00:00:24,890
+All customer activity shown here is fictional.
+
+6
+00:00:26,190 --> 00:00:32,023
+The included dataset contains eighty accounts and one thousand five hundred seventy eight
+events.
+
+7
+00:00:32,023 --> 00:00:34,523
+Default rules flag twenty two accounts.
+
+8
+00:00:34,523 --> 00:00:39,107
+The overview shows activity trends, detection signals, and flagged transfer exposure.
+
+9
+00:00:39,107 --> 00:00:44,107
+Shared filters select an account cohort while preserving full history for detection.
+
+10
+00:00:44,107 --> 00:00:52,440
+The synthetic data includes legitimate changes as well as attacks, so the dashboard
+demonstrates both false positives and missed takeovers.
+
+11
+00:00:53,740 --> 00:00:57,562
+The account investigation view focuses on account zero zero zero one.
+
+12
+00:00:57,562 --> 00:01:04,860
+Its score is eighty, with six distinct signal reasons and a flagged transfer of six
+thousand three hundred twenty two dollars.
+
+13
+00:01:04,860 --> 00:01:08,335
+The score is the highest event score in account history.
+
+14
+00:01:08,335 --> 00:01:13,200
+It is a reason to investigate, rather than a calibrated probability that fraud occurred.
+
+15
+00:01:14,500 --> 00:01:22,890
+The evidence connects a failed login burst and password reset to a successful login on a
+new device in a new country.
+
+16
+00:01:22,890 --> 00:01:26,704
+A beneficiary is then added, followed by a large transfer.
+
+17
+00:01:26,704 --> 00:01:31,662
+The signals only timeline highlights the successful login and transfer that triggered
+rules.
+
+18
+00:01:31,662 --> 00:01:35,476
+All activity is also available for inspecting the preceding events.
+
+19
+00:01:35,476 --> 00:01:39,290
+Detection uses only earlier observations; evaluation labels never affect scoring.
+
+20
+00:01:40,590 --> 00:01:44,842
+The analyst can record evidence and next steps in case notes.
+
+21
+00:01:44,842 --> 00:01:51,412
+In this demonstration, a note describing the failed logins, credential recovery, device
+change, and transfer was saved.
+
+22
+00:01:51,412 --> 00:01:54,890
+Review outcomes and note exports support the investigation workflow.
+
+23
+00:01:54,890 --> 00:01:57,596
+Notes remain in the current Streamlit session.
+
+24
+00:01:57,596 --> 00:02:03,780
+Export them before ending the session because this prototype does not have a durable case
+database.
+
+25
+00:02:05,080 --> 00:02:08,588
+Account zero zero one three demonstrates a legitimate lookalike.
+
+26
+00:02:08,588 --> 00:02:15,995
+Travel triggers new device and new country signals, but the optional synthetic ground truth
+identifies the account as legitimate.
+
+27
+00:02:15,995 --> 00:02:19,503
+This is why analysts need context and alternative explanations.
+
+28
+00:02:19,503 --> 00:02:25,350
+Labels are revealed only for demonstration and evaluation; they are not used by the rules.
+
+29
+00:02:26,650 --> 00:02:31,859
+The detection playground exposes amount thresholds, time windows, and the account alert
+threshold.
+
+30
+00:02:31,859 --> 00:02:38,271
+With the default threshold of forty, the app catches eight takeovers and flags fourteen
+legitimate accounts.
+
+31
+00:02:38,271 --> 00:02:40,675
+Four low signal takeovers are missed.
+
+32
+00:02:40,675 --> 00:02:49,090
+The confusion matrix makes those outcomes explicit, and the comparison table uses the same
+account cohort for default and current rules.
+
+33
+00:02:50,390 --> 00:02:56,308
+After changing the threshold to seventy and applying the rules, alerts drop from twenty two
+to eight.
+
+34
+00:02:56,308 --> 00:03:01,879
+Precision rises from thirty six point four percent to one hundred percent in this
+engineered sample.
+
+35
+00:03:01,879 --> 00:03:07,797
+Recall remains sixty six point seven percent because the same four low signal takeovers are
+still missed.
+
+36
+00:03:07,797 --> 00:03:11,975
+Changing a threshold cannot create evidence that is absent from the data.
+
+37
+00:03:11,975 --> 00:03:14,760
+These results are not a production performance benchmark.
+
+38
+00:03:16,060 --> 00:03:20,584
+The data view explains the schema and provides a dataset download.
+
+39
+00:03:20,584 --> 00:03:28,397
+An uploaded C S V is validated for required columns, unique identifiers, time zones, event
+types, and nonnegative amounts.
+
+40
+00:03:28,397 --> 00:03:29,631
+Labels are optional.
+
+41
+00:03:29,631 --> 00:03:32,509
+Streamlit processes uploads on its Python server.
+
+42
+00:03:32,509 --> 00:03:39,500
+Running locally keeps that processing on your computer; a hosted app processes data on the
+hosting server.
+
+43
+00:03:40,800 --> 00:03:48,194
+The build journal records the actual project prompts, the twelve step implementation,
+source artifacts, and observed iterations.
+
+44
+00:03:48,194 --> 00:03:54,717
+The user selected account takeover, then requested the Streamlit conversion and more
+complete process documentation.
+
+45
+00:03:54,717 --> 00:04:02,111
+The journal screenshots render those real messages and artifacts; they are not original
+Codex chat interface screenshots.
+
+46
+00:04:02,111 --> 00:04:05,590
+The revised report includes the full build breakdown.
+
+47
+00:04:06,890 --> 00:04:12,201
+Nine Python engine tests and five Streamlit app testing workflows pass.
+
+48
+00:04:12,201 --> 00:04:20,408
+They check detection behavior, label independence, time ordering, validation, filters,
+investigations, notes, rule comparisons, and the journal.
+
+49
+00:04:20,408 --> 00:04:28,132
+The public GitHub repository contains the working app, synthetic data, tests, screenshots,
+and the revised report.
+
+50
+00:04:28,132 --> 00:04:32,960
+This completes the generated walkthrough of A T O Investigator.
