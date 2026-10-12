@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Investigate synthetic account takeover alerts through behavioral signals and account timelines."><title>ATO Investigator</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+<aside class="sidebar"><a class="brand" href="#"><span class="brand-icon">◈</span> ATO<span>Investigator</span></a><div class="workspace-label">ANALYST WORKSPACE</div><nav aria-label="Main navigation"><button class="nav active" data-view="overview"><span>▦</span> Overview</button><button class="nav" data-view="investigate"><span>◎</span> Investigate accounts</button><button class="nav" data-view="rules"><span>≋</span> Detection playground</button><button class="nav" data-view="data"><span>▤</span> Data & methodology</button></nav><div class="sidebar-bottom"><span class="status-dot"></span> Fictional data only<p>Week 1 · Path 3 project</p><small>All analysis runs in your browser.</small></div></aside>
+<main><header class="topbar"><div><span class="eyebrow">FRAUD OPERATIONS / ACCOUNT TAKEOVER</span><h1 id="page-title">Investigation overview</h1></div><div class="top-actions"><span class="pill">SYNTHETIC DEMO</span><button id="export-alerts" class="button secondary">Export alerts ↓</button></div></header>
+<div class="intro"><span class="live-dot"></span><span id="dataset-info">Loading account activity…</span><span id="saved-status" role="status"></span></div>
+<section class="filters" aria-label="Global filters"><label>From date <input type="date" id="from-date"></label><label>Through date <input type="date" id="to-date"></label><label>Account home country <select id="country"><option value="all">All countries</option></select></label><label>Account search <input id="search" type="search" placeholder="e.g. ACC-0001"></label><button class="button secondary" id="reset-filters">Reset</button></section>
+<p class="filter-note">Dates use UTC. Rules run on full account history; dates select accounts with activity in the window. Country uses the first successful login.</p>
+<div id="error" role="alert" hidden></div><div id="content" aria-live="polite"></div>
+<footer>ATO Investigator · Explainable rules, investigator judgment · Synthetic results are for demonstration.</footer></main>
+<script type="module" src="app.js"></script>
+</body></html>

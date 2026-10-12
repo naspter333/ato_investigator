@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "checks": [
+    "Overview counts",
+    "Chronological investigation evidence",
+    "Case-note persistence",
+    "Rule threshold effects",
+    "Empty filters",
+    "Invalid date range",
+    "Country filter",
+    "Alert CSV export",
+    "Invalid CSV error",
+    "Valid CSV upload",
+    "Restore demo",
+    "Mobile layout",
+    "No JavaScript errors"
+  ]
+}
