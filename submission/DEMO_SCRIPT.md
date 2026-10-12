@@ -38,7 +38,7 @@ Open Detection playground. Raise Account alert threshold from 40 to 70 and click
 
 “Alerts drop from 22 to 8. The 14 benign alerts disappear in this synthetic example, but recall remains 8 out of 12 takeovers. Four low-signal takeovers are still missed. This shows the limits of the available signals; these results are not a production performance claim.”
 
-Optionally restore defaults, select All accounts in Investigate accounts, and search ACC-0009 to reveal a missed takeover.
+Optionally restore default rules, open Account investigation, and choose ACC-0009 to reveal a missed takeover.
 
 ## 3:25–4:00 Data and vibe coding
 
